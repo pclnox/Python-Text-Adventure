@@ -1,3 +1,8 @@
-import Game
+import Player
 
-print(Game.text)
+running = True
+
+player = Player.Player()
+
+while running:
+    player.Update()
