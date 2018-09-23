@@ -7,11 +7,7 @@ class CommandManager:
         self.commands = ["help", "north", "east", "south", "west", "exit"]
 
     def TestForCommand(self):
-<<<<<<< HEAD
-        statement =  input(">>>")
-=======
-        statement = "help"  # input(">>>")
->>>>>>> 9919cef69978eaedecd7116911fd1725674ea526
+        statement = input(">>>")
 
         if statement in self.commands:
             run = "self." + statement.title() + "()"
