@@ -28,19 +28,19 @@ class CommandManager:
 
     def North(self):
         # self.y -= 1
-        pass
+        print("You went North")
 
     def East(self):
         # self.x += 1
-        pass
+        print("You went East")
 
     def South(self):
         # self.y += 1
-        pass
+        print("You went South")
 
     def West(self):
         # self.x -= 1
-        pass
+        print("You went West")
 
     def Exit(self):
         sys.exit()
