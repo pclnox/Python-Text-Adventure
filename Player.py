@@ -7,7 +7,7 @@ class Player:
         self.y = None
         self.previousX = self.x
         self.previousY = self.y
-        self.commandManager = Command.CommandManager()
+        self.commandManager = Command.CommandManager(self)
 
     def Update(self):
-        self.commandManager.TestForCommand()
+        self.commandManager.TestForCommand(self)
