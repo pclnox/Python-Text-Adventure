@@ -1,1 +1,3 @@
-print("Booty stuff here! Yummy!")
+import Game
+
+print(Game.text)
