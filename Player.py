@@ -8,7 +8,6 @@ class Player:
         self.previousX = self.x
         self.previousY = self.y
         self.commandManager = Command.CommandManager()
-        # self.biome = Location.
 
     def Update(self):
         self.commandManager.TestForCommand()

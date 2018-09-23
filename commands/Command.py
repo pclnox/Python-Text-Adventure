@@ -27,9 +27,14 @@ class CommandManager:
     def North(self):
         pass
 
+    def East(self):
+        pass
+
+    def South(self):
+        pass
+
+    def West(self):
+        pass
+
     def Exit(self):
         sys.exit()
-
-
-c = CommandManager()
-c.TestForCommand()
