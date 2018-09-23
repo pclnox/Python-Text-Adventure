@@ -7,29 +7,15 @@ class CommandManager:
         self.commands = ["help", "north", "east", "south", "west", "exit"]
 
     def TestForCommand(self):
+<<<<<<< HEAD
         statement =  input(">>>")
+=======
+        statement = "help"  # input(">>>")
+>>>>>>> 9919cef69978eaedecd7116911fd1725674ea526
 
         if statement in self.commands:
             run = "self." + statement.title() + "()"
             exec(run)
-
-            '''if statement == self.commands[0]:
-                self.Help()
-
-            elif statement == self.commands[1]:
-                self.North()
-
-            elif statement == self.commands[2]:
-                self.East()
-
-            elif statement == self.commands[3]:
-                self.South()
-
-            elif statement == self.commands[4]:
-                self.West()
-
-            elif statement == self.commands[5]:
-                self.Exit()'''
 
         else:
             print("Enter a valid command")
@@ -47,6 +33,7 @@ class CommandManager:
 
     def Exit(self):
         sys.exit()
+
 
 c = CommandManager()
 c.TestForCommand()
