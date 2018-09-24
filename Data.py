@@ -1,4 +1,4 @@
-from location import Biome
+from locations import Biome
 import random
 
 SHORE = Biome.Biome("shore", 1, 0, 0, 50)
@@ -19,7 +19,7 @@ MAP = [[-2, 1, 1, 1, 1, 1, -2],
        [1,  1, 1, 1, 1, 1, -2]]
 
 for i in range(20):
-    PLAYER_STARTING_X = random.ranint(0, 6)
+    PLAYER_STARTING_X = random.randint(0, 6)
     PLAYER_STARTING_Y = random.randint(0, 7)
 
     if MAP[PLAYER_STARTING_Y][PLAYER_STARTING_X] == 1:

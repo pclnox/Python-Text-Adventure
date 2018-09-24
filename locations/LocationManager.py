@@ -1,9 +1,10 @@
 # import Player
+import Data
 
 
 class LocationManager:
-    def __init__(self, grid):
-        self.map = grid.getMap()
+    def __init__(self):
+        self.map = Data.MAP
 
     def Update(self, x, y, previousX, previousY):
         self.currentLocation = (x, y)
@@ -14,7 +15,3 @@ class LocationManager:
         self.currentLocation = (self.currentLocation[0] + coordChange[0], self.currentLocation[1] + coordChange[1])
 
         return self.currentLocation, self.previousLocation
-
-
-class TileGrid:
-    pass

@@ -9,6 +9,7 @@ class CommandManager:
 
     def TestForCommand(self):
         statement = input(">>>")
+        time.sleep(.25)
 
         if statement in self.commands:
             run = "self." + statement.title() + "()"
@@ -23,9 +24,11 @@ class CommandManager:
     def Help(self):
         print()
         print("Commands:")
+        time.sleep(.5)
 
         for command in self.commands:
             print(command)
+            time.sleep(.1)
 
     def North(self):
         print()
