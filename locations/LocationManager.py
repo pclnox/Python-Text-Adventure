@@ -16,7 +16,14 @@ class LocationManager:
         self.x += coordChange[0]
         self.y += coordChange[1]
 
-        if Data.MAP[self.y][self.x] == Data.SHORE.getMapValue():
+        if self.x < 0 or self.y < 0 or self.x >= len(Data.MAP[0]) or self.y >= len(Data.MAP):
+            self.x = self.previousX
+            self.y = self.previousY
+            print("That's the sea;")
+            time.sleep(2)
+            print("Swim or run?")
+
+        elif Data.MAP[self.y][self.x] == Data.SHORE.getMapValue():
             if self.biome == Data.SHORE:
                 print("You are still on the beach;")
                 time.sleep(2)

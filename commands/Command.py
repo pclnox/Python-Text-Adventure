@@ -4,12 +4,12 @@ import sys
 
 class CommandManager:
     def __init__(self):
-        self.commands = ["help", "north", "east", "south", "west", "exit"]
+        self.commands = ["help", "north", "east", "south", "west", "run", "exit"]
         self.coordChange = (0, 0)
 
     def TestForCommand(self):
-        time.sleep(.5)
         print()
+        time.sleep(.5)
         statement = input(">>>")
         time.sleep(.25)
 
@@ -49,6 +49,11 @@ class CommandManager:
         print("You went West")
         self.coordChange = (-1, 0)
         time.sleep(.5)
+
+    def Run(self):
+        print("Where to?")
+        time.sleep(.5)
+        print("North, east, south or west?")
 
     def Exit(self):
         sys.exit()
