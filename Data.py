@@ -1,5 +1,6 @@
 from locations import Biome
 import random
+import time
 
 SHORE = Biome.Biome("shore", 1, 0, 0, 50)
 WOODS = Biome.Biome("woods", 2, 50, 70, 60)
@@ -28,3 +29,17 @@ for i in range(20):
     elif i == 19:
         PLAYER_STARTING_X = 0
         PLAYER_STARTING_Y = random.randint(1, 6)
+
+
+def StartingMessage():
+    time.sleep(0.5)
+    print("Welcome to the Abandoned Island!")
+    time.sleep(2)
+    print("-" * 30)
+    time.sleep(1)
+    print("You wake up on an abandoned island;")
+    time.sleep(2)
+    print("The storm destroyed your cruise ship;")
+    time.sleep(2)
+    print("You are the only survivor.")
+    time.sleep(.5)
