@@ -8,6 +8,7 @@ class CommandManager:
         self.coordChange = (0, 0)
 
     def TestForCommand(self):
+        time.sleep(.5)
         statement = input(">>>")
         time.sleep(.25)
 

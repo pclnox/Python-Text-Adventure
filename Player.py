@@ -9,6 +9,7 @@ class Player:
         self.y = Data.PLAYER_STARTING_Y
         self.previousX = self.x
         self.previousY = self.y
+        self.biome = Data.PLAYER_STARTING_BIOME
 
         self.commandManager = Command.CommandManager()
         self.locationManager = LocationManager.LocationManager()

@@ -30,6 +30,8 @@ for i in range(20):
         PLAYER_STARTING_X = 0
         PLAYER_STARTING_Y = random.randint(1, 6)
 
+PLAYER_STARTING_BIOME = SHORE
+
 
 def StartingMessage():
     time.sleep(0.5)
@@ -42,4 +44,3 @@ def StartingMessage():
     print("The storm destroyed your cruise ship;")
     time.sleep(2)
     print("You are the only survivor.")
-    time.sleep(.5)
