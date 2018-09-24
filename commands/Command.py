@@ -5,6 +5,7 @@ import sys
 class CommandManager:
     def __init__(self):
         self.commands = ["help", "north", "east", "south", "west", "exit"]
+        self.coordChange = (0, 0)
 
     def TestForCommand(self):
         statement = input(">>>")
@@ -27,20 +28,31 @@ class CommandManager:
             print(command)
 
     def North(self):
-        # self.y -= 1
+        print()
         print("You went North")
+        self.coordChange = (0, -1)
+        time.sleep(.5)
 
     def East(self):
-        # self.x += 1
+        print()
         print("You went East")
+        self.coordChange = (1, 0)
+        time.sleep(.5)
 
     def South(self):
-        # self.y += 1
+        print()
         print("You went South")
+        self.coordChange = (0, 1)
+        time.sleep(.5)
 
     def West(self):
-        # self.x -= 1
+        print()
         print("You went West")
+        self.coordChange = (-1, 0)
+        time.sleep(.5)
 
     def Exit(self):
         sys.exit()
+
+    def setCoordChange(self, x=0, y=0):
+        self.coordChange = (x, y)
