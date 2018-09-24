@@ -36,7 +36,7 @@ PLAYER_STARTING_BIOME = SHORE
 def StartingMessage():
     time.sleep(0.5)
     print("Welcome to the Abandoned Island!")
-    time.sleep(2)
+    time.sleep(1)
     print("-" * 30)
     time.sleep(1)
     print("You wake up on an abandoned island;")
