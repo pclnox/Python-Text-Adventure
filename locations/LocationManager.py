@@ -4,13 +4,17 @@ import time
 
 class LocationManager:
     def Update(self, x, y, previousX, previousY, biome):
-        self.currentLocation = (x, y)
-        self.previousLocation = (previousX, previousY)
+        self.x = x
+        self.y = y
+        self.previousX = previousX
+        self.previousY = previousY
         self.biome = biome
 
     def ChangeLocation(self, coordChange):
-        self.previousLocation = self.currentLocation
-        self.currentLocation = (self.currentLocation[0] + coordChange[0], self.currentLocation[1] + coordChange[1])
+        self.previousX = self.x
+        self.previousY = self.y
+        self.x += coordChange[0]
+        self.y += coordChange[1]
 
         if Data.MAP[self.y][self.x] == Data.SHORE.getMapValue():
             if self.biome == Data.SHORE:
@@ -89,9 +93,10 @@ class LocationManager:
             print("Explore or run?")
 
         else:
-            self.currentLocation = self.previousLocation
+            self.x = self.previousX
+            self.y = self.previousY
             print("That's the sea;")
             time.sleep(2)
             print("Swim or run?")
 
-        return self.currentLocation, self.previousLocation, self.biome
+        return self.x, self.y, self.previousX, self.previousY, self.biome
