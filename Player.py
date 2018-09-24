@@ -15,7 +15,7 @@ class Player:
         self.locationManager = LocationManager.LocationManager()
 
     def Update(self):
-        self.locationManager.Update(self.x, self.y, self.previousX, self.previousY)
+        self.locationManager.Update(self.x, self.y, self.previousX, self.previousY, self.biome)
         self.commandManager.TestForCommand()
 
         if self.commandManager.coordChange != (0, 0):
