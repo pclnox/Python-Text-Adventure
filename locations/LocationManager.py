@@ -42,7 +42,7 @@ class LocationManager:
 
         elif Data.MAP[self.y][self.x] == Data.PLAINS.getMapValue():
             if self.biome == Data.PLAINS:
-                print("You are still on the plains;"
+                print("You are still on the plains;")
                 time.sleep(2)
                 print("It seems to stretch on forever, as far as the eye can see;")
                 time.sleep(2)
@@ -91,7 +91,7 @@ class LocationManager:
         else:
             self.currentLocation = self.previousLocation
             print("That's the sea;")
-            time.sleep(1)
+            time.sleep(2)
             print("Swim or run?")
 
         return self.currentLocation, self.previousLocation, self.biome

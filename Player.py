@@ -19,5 +19,10 @@ class Player:
         self.commandManager.TestForCommand()
 
         if self.commandManager.coordChange != (0, 0):
-            self.locationManager.ChangeLocation(self.commandManager.coordChange)
+            location, previousLocation, self.biome = self.locationManager.ChangeLocation(self.commandManager.coordChange)
+            self.x = location[0]
+            self.y = location[1]
+            self.previousX = previousLocation[0]
+            self.previousY = previousLocation[1]
+
             self.commandManager.setCoordChange()
