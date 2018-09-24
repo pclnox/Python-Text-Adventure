@@ -10,6 +10,9 @@ DESERT = Biome.Biome("desery", 5, 0, 0, 0)
 VOLCANO = Biome.Biome("volcano", 6, 0, 0, 0)
 SEA = Biome.Biome("sea", -2, 0, 0, 0)
 
+BiomesDictionary = {1: SHORE, 2: WOODS, 3: PLAINS, 4: MOUNTAINS, 5: DESERT, 6: VOLCANO, -2: SEA}
+
+
 MAP = [[-2, 1, 1, 1, 1, 1, -2],
        [1,  1, 4, 2, 2, 1,  1],
        [1,  4, 2, 3, 2, 2,  1],
@@ -30,7 +33,7 @@ for i in range(20):
         PLAYER_STARTING_X = 0
         PLAYER_STARTING_Y = random.randint(1, 6)
 
-PLAYER_STARTING_BIOME = SHORE
+PLAYER_STARTING_BIOME = BiomesDictionary[MAP[PLAYER_STARTING_X][PLAYER_STARTING_Y]]
 
 
 def StartingMessage():
