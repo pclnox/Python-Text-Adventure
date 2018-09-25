@@ -2,6 +2,8 @@ from locations import Biome
 import random
 import time
 
+COMMANDS = ["help", "north", "east", "south", "west", "run", "exit"]
+
 SHORE = Biome.Biome("shore", 1, 0, 0, 50)
 WOODS = Biome.Biome("woods", 2, 50, 70, 60)
 PLAINS = Biome.Biome("plains", 3, 60, 50, 60)

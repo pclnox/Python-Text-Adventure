@@ -2,7 +2,9 @@ import Data
 import time
 
 
+# The location manager will handle the players location changes
 class LocationManager:
+    # Updates the necessary variables to be used in ChangeLocation()
     def Update(self, x, y, previousX, previousY, biome):
         self.x = x
         self.y = y
@@ -10,12 +12,15 @@ class LocationManager:
         self.previousY = previousY
         self.biome = biome
 
+    # ChangeLocation() changes the players location based on the coordChange argument
     def ChangeLocation(self, coordChange):
+        # Moves the players coordinates to the new location
         self.previousX = self.x
         self.previousY = self.y
         self.x += coordChange[0]
         self.y += coordChange[1]
 
+        # Checks the new location to see if it is valid, what to tell the user and what biome to change the biome to
         if self.x < 0 or self.y < 0 or self.x >= len(Data.MAP[0]) or self.y >= len(Data.MAP):
             self.x = self.previousX
             self.y = self.previousY
@@ -106,4 +111,5 @@ class LocationManager:
             time.sleep(2)
             print("Swim or run?")
 
+        # Relays the variable changes back to the player
         return self.x, self.y, self.previousX, self.previousY, self.biome
