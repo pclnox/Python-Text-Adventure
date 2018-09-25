@@ -10,7 +10,7 @@ DESERT = Biome.Biome("desery", 5, 0, 0, 0)
 VOLCANO = Biome.Biome("volcano", 6, 0, 0, 0)
 SEA = Biome.Biome("sea", -2, 0, 0, 0)
 
-BIOMES = [SHORE, WOODS, PLAINS, MOUNTAINS, DESERT, VOLCANO, SEA]
+BIOMES = [SHORE, WOODS, PLAINS, MOUNTAINS, DESERT, VOLCANO]
 
 MAP = [[-2, 1, 1, 1, 1, 1, -2],
        [1,  1, 4, 2, 2, 1,  1],
