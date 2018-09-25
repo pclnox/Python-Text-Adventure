@@ -20,7 +20,9 @@ class LocationManager:
         self.x += coordChange[0]
         self.y += coordChange[1]
 
-        # Checks the new location to see if it is valid, what to tell the user and what biome to change the biome to
+        # Checks the new location to see if it is valid and feeds back to the user
+        # Changes the biome to the one of the new location
+        # If the location isnt valid then the player is moved back to its previous location
         if self.x < 0 or self.y < 0 or self.x >= len(Data.MAP[0]) or self.y >= len(Data.MAP):
             self.x = self.previousX
             self.y = self.previousY
