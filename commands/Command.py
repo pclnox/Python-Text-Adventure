@@ -16,7 +16,7 @@ class CommandManager:
         statement = input(">>>")
         time.sleep(.25)
 
-        if statement in self.commands:
+        if statement in Data.COMMANDS:
             run = "self." + statement.title() + "()"
             # exec allows for an efficient way of running the necessary method instead of using lots of if statements
             exec(run)
@@ -32,7 +32,7 @@ class CommandManager:
         print("Commands:")
         time.sleep(.5)
 
-        for command in self.commands:
+        for command in Data.COMMANDS:
             print(command)
             time.sleep(.1)
 
