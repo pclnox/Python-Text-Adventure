@@ -11,8 +11,8 @@ class EntityManager:
     def Update(self):
         pass
 
-# Search() takes argument probs
+# SearchLocation() takes argument probs
 
-# Found() handles the location data and relays it to the user
+# DisplayFound() handles the location data and relays it to the user
 
 # GenerateAllEntities() uses the argument probs to generate what entites are in the current location

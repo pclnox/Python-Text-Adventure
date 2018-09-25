@@ -26,12 +26,13 @@ class Player:
 
         # If the user requested to move then the player will update its variables to the new location
         if self.commandManager.coordChange != (0, 0):
-            self.x, self.y, self.previousX, self.previousY, self.biome = self.locationManager.ChangeLocation(self.commandManager.coordChange)
+            self.x, self.y, self.previousX, self.previousY,
+            self.biome = self.locationManager.ChangeLocation(self.commandManager.coordChange)
             # The player has moved therefore coordChange can be reset
             self.commandManager.setCoordChange()
 
         # If the user requested to explore the location then the player calls that in the entity manager
         elif self.commandManager.explore:
-                self.entityManager.Search(self.biome.getEntityProbs())
+                self.entityManager.SearchLocation(self.biome.getEntityProbs())
                 # The player has explored the location therefore explore can be reset
                 self.commandManager.setExplore()
