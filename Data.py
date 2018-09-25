@@ -2,7 +2,7 @@ from locations import Biome
 import random
 import time
 
-COMMANDS = ["help", "north", "east", "south", "west", "run", "exit"]
+COMMANDS = ["help", "north", "east", "south", "west", "run", "exit", "explore"]
 
 SHORE = Biome.Biome("shore", 1, 0, 0, 50)
 WOODS = Biome.Biome("woods", 2, 50, 70, 60)
@@ -46,7 +46,8 @@ def StartingMessage():
     print("-" * 30)
     time.sleep(1)
     print("You wake up on an abandoned island;")
-    time.sleep(2)
+    time.sleep(1.5)
     print("The storm destroyed your cruise ship;")
-    time.sleep(2)
+    time.sleep(1.5)
     print("You are the only survivor.")
+    time.sleep(.5)

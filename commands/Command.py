@@ -63,6 +63,13 @@ class CommandManager:
         time.sleep(.5)
         print("North, east, south or west?")
 
+    def Explore(self):
+        print("You have searched your surroundings")
+        time.sleep(.5)
+        print("There is nothing left to explore, which direction would you like to go?")
+        time.sleep(.5)
+        print("North, east, south or west?")
+
     # Exit() exits the game immediately
     # Save features will be implemented later on before the game exits
     def Exit(self):
