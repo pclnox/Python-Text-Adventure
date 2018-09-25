@@ -35,7 +35,7 @@ for i in range(20):
         PLAYER_STARTING_Y = random.randint(1, 6)
 
 for biome in BIOMES:
-    if biome.getMapValue() == MAP[PLAYER_STARTING_X][PLAYER_STARTING_Y]:
+    if biome.getMapValue() == MAP[PLAYER_STARTING_Y][PLAYER_STARTING_X]:
         PLAYER_STARTING_BIOME = biome
 
 
