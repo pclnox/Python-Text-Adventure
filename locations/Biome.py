@@ -1,6 +1,6 @@
 # Defines the biome class to easily create new biomes which store their relevant data
 class Biome:
-    # The constructor takes arguments about the biome which will be stored and provided through getters
+    # The constructor takes arguments about the biome which will be stored and provided to other classes through getters
     def __init__(self, name, mapValue, lakeProb, groveProb, caveProb):
         self.name = name
         self.mapValue = mapValue

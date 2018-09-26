@@ -1,6 +1,8 @@
 from locations import Biome
 import random
 import time
+from entities import Entity
+from entities import SubEntity
 
 # Defines what commands there are
 COMMANDS = ["help", "north", "east", "south", "west", "run", "exit", "explore"]
@@ -44,6 +46,25 @@ for i in range(20):
 for biome in BIOMES:
     if biome.getMapValue() == MAP[PLAYER_STARTING_Y][PLAYER_STARTING_X]:
         PLAYER_STARTING_BIOME = biome
+
+# Defines the different entities
+LAKE = Entity.Entity("lake", 1, 0, 100, 0, 40)
+GROVE = Entity.Entity("grove", 2, 2, 0, 100, 40)
+CAVE = Entity.Entity("cave", 2, 8, 0, 0, 40)
+
+# Puts the entities into one list which can be used when needing to iterate through the entities
+ENTITIES = [LAKE, GROVE, CAVE]
+
+# Defines the different sub-entities
+FISH = SubEntity.SubEntity("fish", 1, 150, 1, 1)
+TREES = SubEntity.SubEntity("trees", 10, 20, 3, 4)
+GROVE_LAKE = SubEntity.SubEntity("lake", 0, 0, 5, 5)
+GROVE_FISH = SubEntity.SubEntity("fish", 0, 0, 6, 7)
+CAVE_LAKE = SubEntity.SubEntity("lake", 0, 0, 11, 11)
+CAVE_FISH = SubEntity.SubEntity("fish", 0, 0, 12, 13)
+
+# Puts the sub-entities into one list which can be used when needing to iterate through the sub-entities
+SUB_ENTITIES = [FISH, TREES, GROVE_LAKE, GROVE_FISH, CAVE_LAKE, CAVE_FISH]
 
 
 # This method defines the starting message to print to the user
